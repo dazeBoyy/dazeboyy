@@ -1,0 +1,50 @@
+groupmates = [
+{
+"name": "Никита",
+"surname": "Иванов",
+"exams": ["Информатика", "ЭЭиС", "Web"],
+"marks": [4, 3, 5]
+},
+{
+"name": "Иван",
+"surname": "Петров",
+"exams": ["История", "АиГ", "КТП"],
+"marks": [4, 4, 4]
+},
+{
+"name": "Витя",
+"surname": "Смирнов",
+"exams": ["Философия", "ИС", "КТП"],
+"marks": [5, 5, 5]
+},
+{
+"name": "Петя",
+"surname": "Заронов",
+"exams": ["Философия", "ИС", "КТП"],
+"marks": [2, 3, 2]
+},
+{
+"name": "Леша",
+"surname": "Аканов",
+"exams": ["3d", "ИС", "Web"],
+"marks": [5, 4, 3]
+},
+{
+"name": "Алишер",
+"surname": "Бибо",
+"exams": ["Русский", "Литература", "РПС"],
+"marks": [3, 5, 4]
+},
+]
+
+def count_mark(students,mark):
+    print ("surname".ljust(15), "marks".ljust(20))
+    for student in students:
+        marks_list = student["marks"]
+        result = (sum(marks_list)/len(marks_list))
+        if result >= need:
+            print(student["surname"].ljust(15), str(student["marks"]).ljust(20))
+
+need = int(input('Input :'))
+
+count_mark(groupmates,need)
